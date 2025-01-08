@@ -13,7 +13,7 @@ export const useApiPost = () => {
     const register = async (json, urlApi, url) => {
 
         try {
-            const response = await fetch(`http://localhost:3000/${urlApi}`, {
+            const response = await fetch(`https://backend-book-yghs.onrender.com/${urlApi}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -49,7 +49,7 @@ export const useApiPost = () => {
     const sendBookFunction = async (json, urlApi, token) => {
 
         try {
-            const response = await fetch(`http://localhost:3000/${urlApi}`, {
+            const response = await fetch(`https://backend-book-yghs.onrender.com/${urlApi}`, {
                 method: 'POST',
                 headers: {
                     'token': token
@@ -75,7 +75,7 @@ export const useApiPost = () => {
     }
     const sendCommentFunction = async (json, urlApi, token) => {
 
-        fetch(`http://localhost:3000/${urlApi}`, {
+        fetch(`https://backend-book-yghs.onrender.com/${urlApi}`, {
             method: 'POST', // Método POST
             headers: {
                 'Content-Type': 'application/json',
@@ -101,7 +101,7 @@ export const useApiPost = () => {
 
     const deleteCommentFunction = (token, url) => {
 
-        fetch(`http://localhost:3000/${url}`, {
+        fetch(`https://backend-book-yghs.onrender.com/${url}`, {
             method: 'DELETE',
             headers: {
                 'token': token
@@ -127,7 +127,7 @@ export const useApiPost = () => {
     const sesionShow = async (token) => {
 
         try {
-            const response = await fetch('http://localhost:3000/showUsers', {
+            const response = await fetch('https://backend-book-yghs.onrender.com/showUsers', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -149,7 +149,7 @@ export const useApiPost = () => {
     const apiGet = async (token, url) => {
 
         try {
-            const response = await fetch(`http://localhost:3000/${url}`, {
+            const response = await fetch(`https://backend-book-yghs.onrender.com/${url}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -172,7 +172,7 @@ export const useApiPost = () => {
     const showLike = async (token, url) => {
 
         try {
-            const response = await fetch(`http://localhost:3000/${url}`, {
+            const response = await fetch(`https://backend-book-yghs.onrender.com/${url}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -195,7 +195,7 @@ export const useApiPost = () => {
     const showComments = async (token, url) => {
 
         try {
-            const response = await fetch(`http://localhost:3000/${url}`, {
+            const response = await fetch(`https://backend-book-yghs.onrender.com/${url}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',

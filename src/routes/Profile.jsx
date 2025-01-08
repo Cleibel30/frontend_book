@@ -95,7 +95,7 @@ export const Profile = () => {
         </div>
       </div>
 
-      <h2 className='border-bottom border-light container py-4 mb-4'>{(sesion && sesion.body.admin) && "Libros"} {(sesion && !sesion.body.admin) && "Mis me gustas"}</h2>
+      <h2 className='border-bottom border-light container py-4 mb-4'>Libros recomendados</h2>
       {(responseForm || responseGet) ? (
         <Books books={responseGet} booksSearch={responseForm}></Books>
       ) : <h2 className="container">Cargando...</h2>}

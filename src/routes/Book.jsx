@@ -37,7 +37,7 @@ const textComment = useRef()
   const errorFunction = () => {
     if (!sesion) setsesionActive(true)
     else {
-      fetch(`http://localhost:3000/showBooks/${responseGet.body.book_url}`)
+      fetch(`https://backend-book-yghs.onrender.com/showBooks/${responseGet.body.book_url}`)
         .then(response => {
           if (!response.ok) {
             throw new Error('Error en la red al intentar descargar el archivo');
@@ -94,7 +94,7 @@ const textComment = useRef()
         <div className="container margin">
           <div className="row pt-5">
             <div className="col-lg-4 col-md-6 col-sm-12">
-              <img src={`http://localhost:3000/showBooks/${responseGet.body.photo_url}`} className='w-100 h' alt="" />
+              <img src={`https://backend-book-yghs.onrender.com/showBooks/${responseGet.body.photo_url}`} className='w-100 h' alt="" />
             </div>
             <div className="col-lg-8 col-md-6 col-sm-12">
               <h1 className='fs-2 mb-4'>{responseGet.body.title}</h1>
@@ -103,7 +103,7 @@ const textComment = useRef()
               <p className='fs-4'><span className='fw-bold'>Genero: </span>{responseGet.body.gender}</p>
               <div className="d-flex gap-2 flex-wrap">
                 <button className='btn btn-primary btn-lg fw-bold' onClick={errorFunction}>Descargar <i class="fa-solid fa-download"></i></button>
-                <a href={sesion && `http://localhost:3000/showBooks/${responseGet.body.book_url}`} target='_blank' className='btn btn-success btn-lg fw-bold' onClick={errorFunction}>Leer Libro <i class="fa-brands fa-readme"></i></a>
+                <a href={sesion && `https://backend-book-yghs.onrender.com/showBooks/${responseGet.body.book_url}`} target='_blank' className='btn btn-success btn-lg fw-bold' onClick={errorFunction}>Leer Libro <i class="fa-brands fa-readme"></i></a>
                 {(sesion && !sesion.body.admin) && (<button className='btn fs-3' ref={likeCont} onClick={like}><i class={`fa-solid fa-heart heart like ${(likeShow && likeShow.ok) && "text-danger"}`}></i></button>)}
                 {(sesion && sesion.body.admin) && (
                   <div className="d-flex">

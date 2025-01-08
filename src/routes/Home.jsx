@@ -41,6 +41,7 @@ export const Home = () => {
           </form>
         </div>
       </div>
+     
       <h2 className='container fw-bolder py-5'>{(!sendValue) && "Últimas publicaciones"} {(sendValue && sendValue.search) && `Búsqueda: ${sendValue.search}.`} {(responseForm && !responseForm.ok) && responseForm.message}</h2>
       {(responseForm || responseGet) ? (
         <Books books={responseGet} booksSearch={responseForm}></Books>

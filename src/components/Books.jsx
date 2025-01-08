@@ -29,7 +29,7 @@ export const Books = ({books, booksSearch}) => {
                 <Zoom>
             <a href={`/book/${item.book_id}`} className="col-lg-4 col-md-6 col-sm-12 text-decoration-none translate">
               <article className='bg-light rounded shadow overflow-hidden'>
-                <img src={`http://localhost:3000/showBooks/${item.photo_url}`} alt="" className='img-h' />
+                <img src={`https://backend-book-yghs.onrender.com/showBooks/${item.photo_url}`} alt="" className='img-h' />
                 <div className="card-body text-dark p-2 d-flex flex-column justify-content-between">
                   <p className='fs-6 p-0 fw-bold'>{item.title}</p>
                   <p className='fs-6 p-0'><span className='fw-bold'>Genero:</span> {item.gender}</p>
@@ -48,7 +48,7 @@ export const Books = ({books, booksSearch}) => {
                 <Zoom>
             <a href={`/book/${item.book_id}`} className="col-lg-4 col-md-6 col-sm-12 text-decoration-none translate">
               <article className='bg-light rounded shadow overflow-hidden'>
-                <img src={`http://localhost:3000/showBooks/${item.photo_url}`} alt="" className='img-h' />
+                <img src={`https://backend-book-yghs.onrender.com/showBooks/${item.photo_url}`} alt="" className='img-h' />
                 <div className="card-body text-dark p-2 d-flex flex-column justify-content-between">
                   <p className='fs-6 p-0 fw-bold'>{item.title}</p>
                   <p className='fs-6 p-0'><span className='fw-bold'>Genero:</span> {item.gender}</p>
